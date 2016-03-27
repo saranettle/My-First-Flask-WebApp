@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    {% if name %}
+    <title> Information for {{ name }} </title>
+    {% else %}
+    <title> No Drink Selected </title>
+    {% endif %}
+
+</head>
+
+<body>
+
+    {% if name %}
+      <h1>{{ name }}</h1>
+    {% else %}
+      <h1>No Drink Selected</h1>
+    {% endif %}
+
+    <h2>Primary Alcohol</h2>
+      {% if alcohol %}
+        <p>{{ alcohol }}</p>
+      {% else %}
+        <p>Nothing here</p>
+      {% endif %}
+
+    <h2>Ingredients</h2>
+      {% if ingredients %}
+        <p>{{ ingredients }}</p>
+      {% else %}
+        <p>Nothing here</p>
+      {% endif %}
+
+  <a href="/">Go back to the home page.</a>
+
+</body>
+</html>
